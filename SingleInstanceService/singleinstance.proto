@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package singleinstance;
+
+// The single instance service definition.
+service SingleInstance {
+	// Sends a greeting
+	rpc SendArgs (SendArgsRequest) returns (SendArgsReply) {}
+}
+
+// The request message containing the arguments.
+message SendArgsRequest {
+	repeated string args = 1;
+}
+
+// The response message
+message SendArgsReply {
+	string message = 1;
+}
